@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="container">
+<div class="card z-depth-5">
+       <div class="card-image">
+           {% if page.img %}
+           <img src="{{page.img}}">
+           {% endif %}
+         <span class="card-title">{{ page.title }} - {{ page.date | date: "%b %-d, %Y" }}{% if page.author %} • {{ page.author }}{% endif %}{% if page.meta %} • {{ page.meta }}{% endif %}</span>
+       </div>
+       <div class="card-content">
+        {{ content }}
+       </div>
+       <div class="card-action">
+         <a href="{{ "/blog/" | prepend: site.baseurl }}">All Posts</a>
+     </div>
+
+ </div>
+ </div>

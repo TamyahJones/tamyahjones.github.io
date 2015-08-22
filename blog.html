@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+permalink: /blog/
+---
+
+<div class="container">
+    <div class="card black-text z-depth-3">
+        <div class="card-content">
+            <span class="card-title black-text">Blog</span>
+            <ul class="collection">
+            {% for post in site.categories.blog %}
+            {% if post.img-small %}
+            <li class="collection-item avatar">
+                <img class="circle" src="{{post.img-small}}">
+            {% else %}
+            <li class="collection-item">
+            {% endif %}
+              <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }} - {{ post.date | date: "%b %-d, %Y" }}</a>
+
+              <p>{{ post.excerpt }}</p>
+              <!--span class="secondary-content"><span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span></span-->
+              </li>
+            {% endfor %}
+            <ul>
+        </div>
+    </div>
+</div>

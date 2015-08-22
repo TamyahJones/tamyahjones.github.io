@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<div class="container">
+    <div class="hero row center-align white-text">
+        <div class="col m12">
+            <h1>Hi, my name is Tamyah Jones</h1>
+        </div>
+        <div class="col m12">
+            <h3>I am a sprinter (100m and 200m), I'm 14</h3>
+            <h3>and I have an ever growing interest in law</h3>
+        </div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+    <div class="col l5">
+      <div class="card z-depth-3">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="images/lawyer-preview.jpg">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4"><h4>Law Out Loud</h4><i class="material-icons right">more_vert</i></span>
+          <p><a href="{{ "/law/" | prepend: site.baseurl }}"><h6>All posts</h6></a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Latest Posts<i class="material-icons right">close</i></span>
+          <ul class="collection">
+          {%  for post in site.categories.law limit:3 %}
+            <li class="collection-item">
+              <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+              <p><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
+            <p class="truncate">{{ post.excerpt }}</p>
+            </li>
+          {% endfor %}
+      </ul>
+           <!--p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p-->
+        </div>
+      </div>
+    </div>
+    <div class="col l5 offset-l1">
+      <div class="card z-depth-3">
+        <div class="card-image waves-effect waves-block waves-light">
+          <img class="activator" src="images/blog-preview.jpg">
+        </div>
+        <div class="card-content">
+          <span class="card-title activator grey-text text-darken-4"><h4>Photo Diary</h4><i class="material-icons right">more_vert</i></span>
+          <p><a href="{{ "/blog/" | prepend: site.baseurl }}"><h6>All posts</h6></a></p>
+        </div>
+        <div class="card-reveal">
+          <span class="card-title grey-text text-darken-4">Latest Posts<i class="material-icons right">close</i></span>
+           <ul class="collection">
+          {%  for post in site.categories.blog limit:3 %}
+          <li class="collection-item">
+            <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+            <p><a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></p>
+          <p class="truncate">{{ post.excerpt }}</p>
+          </li>
+          {% endfor %}
+        </ul>
+           <!--p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p-->
+        </div>
+    </div>
+    </div>
+</div>
+</div>

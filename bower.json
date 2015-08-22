@@ -1,0 +1,11 @@
+{
+  "name": "tamyahjones.github.io",
+  "version": "0.0.0",
+  "authors": [
+    "Tamyah Jones <tamyahjones@gmail.com>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "materialize": "~0.97.0"
+  }
+}

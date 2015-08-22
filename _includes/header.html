@@ -1,0 +1,28 @@
+<!--div class="navbar-fixed black"-->
+  <header>
+    <nav class="transparent z-depth-0">
+        <div class="nav-wrapper transparent">
+            <a id="logo-container" href="/" class="brand-logo center">{{ site.title | split:"" | join:"&nbsp;&nbsp;&nbsp;" }}</a>
+            <ul id="nav-mobile" class="left hide-on-med-and-down">
+              {% for page in site.pages %}
+                {% if page.title %}
+                <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+                {% endif %}
+              {% endfor %}
+            </ul>
+          <ul class="side-nav" id="mobile-demo">
+              {% for page in site.pages %}
+                {% if page.title %}
+            <li><a href="{{ page.url | prepend: site.baseurl }}">{{ page.title }}</a></li>
+            {% endif %}
+          {% endfor %}
+        </ul>
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+
+      </div>
+    </nav>
+</header>
+<div class="nav-bg z-depth-1"></div>
+<div class="nav-space"></div>
+
+<img src="/images/bg.jpg" id="bg-img"></img>

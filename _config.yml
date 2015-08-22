@@ -1,0 +1,23 @@
+# Site settings
+title: tamyah jones
+email: tamyahjones@gmail.com
+description: > # multiline
+  Description  ...
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "http://yourdomain.com" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - package.json
+  - less
+  - npm-debug.log
+  - README*
+  - LICENSE
+  - build.sh
+  - bower.json
+  - bower_components
+  - node_module
